@@ -12,7 +12,7 @@ clean:
 	-rm stat_key_browser/data/key_cats.json
 	-rm web_app/js/keys.js
 	-rm web_app/index.html
-	-rm isilon_stat_browser.zip
+	-rm isilon_stat_browser_v*.zip
 
 tags:
 	$(HEXAPARSE) stat_key_browser/data/key_tags.hexa > stat_key_browser/data/key_tags.json
@@ -44,4 +44,4 @@ dist: check_cluster clean unittests tags
 	cp README.md $(DIST_DIR)
 	cp -r stat_key_browser $(DIST_DIR)
 	cp -r web_app $(DIST_DIR)
-	zip -r isilon_stat_browser.zip dist/*
+	zip -r isilon_stat_browser_$$(git describe --exact-match --abbrev=0).zip dist/*

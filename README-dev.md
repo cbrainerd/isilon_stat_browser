@@ -28,11 +28,11 @@ Isilon SDK Python language bindings
 `./build_stat_browser`
 
 ### Build a distributable zip file:
-The build will pause to request cluster IP, username and password. 
+The build will pause to request cluster IP, username and password.
 
 `make dist`
 
-### Build a distributable zip file non-interactively: 
+### Build a distributable zip file non-interactively:
 
 Supply the cluster IP, username and password when building via automation.
 
@@ -50,6 +50,34 @@ The functional tests are only a stub currently.
 ###Run the page building tool
 
 `./build_stat_browser.py -c <cluster IP>`
+
+# Release process
+Once the master branch is in a state ready for a release, tag the current commit
+with a version number.
+
+`git tag -a v0.0.1 -m 'version 0.0.1'`
+
+Push the tag to git
+
+`git push origin v0.0.1`
+
+This creates a release in [isilon_stat_browser/releases](../../releases)
+
+Create the distribution for release
+
+`make dist BUILD_BROWSER_ARGS='-c <cluster IP> -u <username> -p <password>'`
+
+This creates a .zip file in the top-level project directory.
+
+Go to [isilon_stat_browser/releases](../../releases) and draft a new release.
+Enter the tag into the tag version box and the tag should be recognized as an
+existing tag.
+
+Enter any needed release notes
+
+Attach the zipped release distribution to the release.
+
+Publish the release.
 
 # Files
 
@@ -75,7 +103,7 @@ A human written and readable file that defines which tags are to be applied to l
 
 * `stat_key_browser/data/key_tags.json`:
 
-The automatically generated JSON that results when hexaparse.py parsed key\_tags.hexa during the build process. This file is referenced by build\_stat\_browser.py to tag stat keys received from PAPI and is part of the distributable zip. 
+The automatically generated JSON that results when hexaparse.py parsed key\_tags.hexa during the build process. This file is referenced by build\_stat\_browser.py to tag stat keys received from PAPI and is part of the distributable zip.
 
 * `keys.js`
 
