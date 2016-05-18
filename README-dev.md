@@ -13,24 +13,39 @@ Isilon SDK Python language bindings
 
 ##Development getting started
 
-Clone this repo:
+###Clone this repo:
 
 `git clone <repo>`
 
 `cd isilon_stat_browser`
 
-Install the dependencies:
+### Install the dependencies:
 
 `pip install -r requirements-dev.txt`
 
-Build the html and js output.
+### Build the html and js output in ./webapp:
 
-`make html`
+`./build_stat_browser`
 
+### Build a distributable zip file:
+The build will pause to request cluster IP, username and password. 
 
-###run unit tests
+`make dist`
+
+### Build a distributable zip file non-interactively: 
+
+Supply the cluster IP, username and password when building via automation.
+
+`make dist BUILD_BROWSER_ARGS='-c <cluster IP> -u <username> -p <password>'`
+
+### Run unit tests:
 
 `make unittests`
+
+### Run functional tests:
+The functional tests are only a stub currently.
+
+`make functional_tests`
 
 ###Run the page building tool
 
@@ -44,7 +59,7 @@ The developer facing readme that you are reading now.
 
 * `README.md`
 
-The user-facing readme.
+The user-facing readme that gets packaged into the distributable zip.
 
 * `stat_key_browser/data/key_cats.hexa`
 
@@ -60,7 +75,7 @@ A human written and readable file that defines which tags are to be applied to l
 
 * `stat_key_browser/data/key_tags.json`:
 
-The automatically generated JSON that results when hexaparse.py parsed key\_tags.hexa during the build process. This file is referenced by build\_stat\_browser.py to tag stat keys received from PAPI.
+The automatically generated JSON that results when hexaparse.py parsed key\_tags.hexa during the build process. This file is referenced by build\_stat\_browser.py to tag stat keys received from PAPI and is part of the distributable zip. 
 
 * `keys.js`
 
