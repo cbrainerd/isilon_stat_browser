@@ -6,13 +6,9 @@ This repository is part of the Isilon SDK, which is an evolving package of docum
 Python 2.7 or 3.5
 
 ##Installation
-You can obtain the files for the stat browser by cloning this Github repository:
+You can obtain the files for the stat browser by downloading a release zip file from this Github repository:
 
-`git clone git@github.com/isilon/isilon_stat_browser.git`
-
-or by downloading the isilon_stat_browser zip file through the "Download ZIP" link and extracting the files.
-
-`unzip <branch-name>.zip`
+[isilon_stat_browser/releases](../../releases)
 
 ##View statistics keys with the stat browser
 Once the files and directories in the zip file are extracted, you will see a stat_key_browser directory. Open the web_app/index.html file in a web browser to browse the statistics keys available in the distribution package.
@@ -59,4 +55,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
