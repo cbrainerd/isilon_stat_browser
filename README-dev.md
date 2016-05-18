@@ -67,7 +67,9 @@ Create the distribution for release
 
 `make dist BUILD_BROWSER_ARGS='-c <cluster IP> -u <username> -p <password>'`
 
-This creates a .zip file in the top-level project directory.
+This creates a .zip file in the top-level project directory. The file will be
+automatically named with the version specified in the tag. If no version number
+appears in the file something has gone wrong.
 
 Go to [isilon_stat_browser/releases](../../releases) and draft a new release.
 Enter the tag into the tag version box and the tag should be recognized as an
