@@ -10,6 +10,12 @@ You can obtain the files for the stat browser by downloading a release zip file 
 
 [isilon_stat_browser/releases](../../releases)
 
+## Development
+Developers can view the development readme for information about stat browser development.
+
+[isilon_stat_browser/README-dev.md](README-dev.md)
+
+
 ##View statistics keys with the stat browser
 Once the files and directories in the zip file are extracted, you will see a stat_key_browser directory. Open the web_app/index.html file in a web browser to browse the statistics keys available in the distribution package.
 
