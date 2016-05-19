@@ -1,6 +1,6 @@
 [![Master Build Status](https://travis-ci.org/Isilon/isilon_stat_browser.svg?branch=master)](https://travis-ci.org/Isilon/isilon_stat_browser)
-![Pull Request Stats](http://issuestats.com/github/isilon/isilon_stat_browser/badge/pr?style=flat-square)
-![Issues Closed Stats](http://issuestats.com/github/isilon/isilon_stat_browser/badge/issue?style=flat-square)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/isilon/isilon_stat_browser.svg)](http://isitmaintained.com/project/isilon/isilon_stat_browser "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/isilon/isilon_stat_browser.svg)](http://isitmaintained.com/project/isilon/isilon_stat_browser "Percentage of issues still open")
 
 #stat-key-browser
 
