@@ -1,3 +1,7 @@
+[![Master Build Status](https://travis-ci.org/Isilon/isilon_stat_browser.svg?branch=master)](https://travis-ci.org/Isilon/isilon_stat_browser)
+![Pull Request Stats](http://issuestats.com/github/isilon/isilon_stat_browser/badge/pr?style=flat-square)
+![Issues Closed Stats](http://issuestats.com/github/isilon/isilon_stat_browser/badge/issue?style=flat-square)
+
 #stat-key-browser
 
 A single page web app that provides a browsable, searchable view of Isilon statistics keys. A Python script generates the html by querying an Isilon cluster for the list of statistics keys, then organizing and categorizing the keys before outputting the html app to web_app.
@@ -54,7 +58,7 @@ The functional tests are only a stub currently.
 # Release process
 
 **Note:**
-This process is used by repo owners to cut a release.
+This is a temporary manual process to be used by repo owners to cut a release until automated build/release is implemented.
 
 
 Once the master branch is in a state ready for a release, tag the current commit
