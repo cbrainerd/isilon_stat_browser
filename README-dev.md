@@ -3,7 +3,7 @@
 A single page web app that provides a browsable, searchable view of Isilon statistics keys. A Python script generates the html by querying an Isilon cluster for the list of statistics keys, then organizing and categorizing the keys before outputting the html app to web_app.
 
 ##requirements
-Python 2.7 or 3.5
+Python: 2.7, 3.3, 3.4, 3.5
 
 Dependencies listed in requirements-dev.txt
 
@@ -52,6 +52,11 @@ The functional tests are only a stub currently.
 `./build_stat_browser.py -c <cluster IP>`
 
 # Release process
+
+**Note:**
+This process is used by repo owners to cut a release.
+
+
 Once the master branch is in a state ready for a release, tag the current commit
 with a version number.
 
@@ -61,7 +66,7 @@ Push the tag to git
 
 `git push origin v0.0.1`
 
-This creates a release in [isilon_stat_browser/releases](../../releases)
+This creates a release in [isilon\_stat\_browser/releases](../../releases)
 
 Create the distribution for release
 
@@ -69,9 +74,9 @@ Create the distribution for release
 
 This creates a .zip file in the top-level project directory. The file will be
 automatically named with the version specified in the tag. If no version number
-appears in the file something has gone wrong.
+appears in the file name something has gone wrong.
 
-Go to [isilon_stat_browser/releases](../../releases) and draft a new release.
+Go to [isilon\_stat\_browser/releases](../../releases) and draft a new release.
 Enter the tag into the tag version box and the tag should be recognized as an
 existing tag.
 
