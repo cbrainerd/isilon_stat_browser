@@ -4,7 +4,7 @@
 
 #Statistics Key Browser
 
-# change for test 6
+# change for test 7
 
 This repository is part of the Isilon SDK, which is an evolving package of documents and files. This README describes how to use the statistics key browser (stat browser) to browse the statistics keys that an Isilon cluster exposes. The stat browser is a Python script-generated web browser that provides a searchable list of OneFS statistics keys, organized by functional categories.
 
