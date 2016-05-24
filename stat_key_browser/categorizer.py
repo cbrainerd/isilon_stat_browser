@@ -172,6 +172,7 @@ class Categorizer(object):
             if 're-keys' in defin:
                 for re_key in defin['re-keys']:
                     if re.search(re_key, key):
+                        break
                         supercat = defin['super']
                         if 'sub' in defin:
                             subcat = defin['sub']
