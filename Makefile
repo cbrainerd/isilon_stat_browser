@@ -45,3 +45,12 @@ dist: check_cluster clean unittests tags
 	cp -r stat_key_browser $(DIST_DIR)
 	cp -r web_app $(DIST_DIR)
 	zip -r isilon_stat_browser_$$(git describe --exact-match --abbrev=0).zip dist/*
+
+jsunittests:
+	casperjs test web_app/js/tests/unit_app_filter_lib.js \
+		--includes=web_app/js/app_filter_lib.js,web_app/js/app_lib.js
+	casperjs test web_app/js/tests/unit_app_lib.js --includes=web_app/js/app_lib.js
+	casperjs test web_app/js/tests/unit_app_papi_link.js --includes=web_app/js/app_papi_link.js
+
+jstests: dist jsunittests
+	casperjs test web_app/js/tests/smoke.js

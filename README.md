@@ -61,6 +61,7 @@ The script will prompt you for a username and password, and will create the brow
 You can use the SDK Python language bindings to automate the configuration, maintenance, and monitoring of your Isilon cluster. For information on how to install the Python language bindings and write Python scripts to access the OneFS API, refer to the following Github sites:
 
 [`https://github.com/Isilon/isilon_sdk_7_2_python`](https://github.com/Isilon/isilon_sdk_7_2_python)
+
 [`https://github.com/Isilon/isilon_sdk_8_0_python`](https://github.com/Isilon/isilon_sdk_8_0_python)
 
 

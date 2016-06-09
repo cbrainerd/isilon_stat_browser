@@ -34,4 +34,14 @@ $( document ).ready(function() {
     captureLength: 2
   }
   $('#text_filter').typeWatch(options)
+
+  // Setup PAPI links
+  $('.papi_demo').click(papi_link_clicked)
+  $('#modal_cluster_save').click(save_cluster_ip)
+  $('#modal_cluster').on('shown.bs.modal', function () {$('#text_cluster').focus()})
+  cluster_ip = keyDict['cluster']['host']
+  if (cluster_ip != null) {
+    // Populate PAPI links if IP is known
+    update_papi_links(keyDict['cluster']['host'])
+  }
 });
