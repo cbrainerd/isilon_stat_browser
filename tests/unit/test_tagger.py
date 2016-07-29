@@ -91,9 +91,9 @@ class TestTagger(unittest.TestCase):
 
         defin = {'re-keys': ['g', 'h'], 'tags': ['a', 'b'], 'arb': ['arbarb']}
         result = tg._get_extra_attrs(defin)
-        assert result == {'arb': 'arbarb'}
+        assert result == {'arb': ['arbarb']}
 
-    def test_get_arb_attrs_01(self):
+    def test_get_arb_attrs_02(self):
         tg = Tagger([{'re-keys': ['g', 'h'], 'tags': ['a', 'b']}])
 
         defin = {'re-keys': ['g', 'h'], 'tags': ['a', 'b'], 'arb': ['arbarb', 'arbTWO']}

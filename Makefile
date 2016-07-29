@@ -21,7 +21,7 @@ tags:
 	$(HEXAPARSE) stat_key_browser/data/key_cats.hexa > stat_key_browser/data/key_cats.json
 
 lint:
-	$(PYLINT) -E -f colorized -r n stat_key_browser bin/ tests/
+	$(PYLINT) -E -f colorized -r n stat_key_browser build_stat_browser.py tests/
 
 unittests: lint
 	$(PYTHON) -m pytest -v tests/unit/ *.py
@@ -29,8 +29,7 @@ unittests: lint
 coverage: lint
 	$(PYTHON) -m pytest -v --cov=stat_key_browser --cov-report term-missing --cov-config tests/unit/.coveragerc tests/unit/ *.py
 
-travis-ci: tags lint
-	$(PYTHON) -m pytest -v tests/unit/ hexaparse.py
+travis-ci: tags unittests jsunittests
 
 check_cluster:
 	if [ -z $$BUILD_BROWSER_ARGS ]; then echo BUILD_BROWSER_ARGS not set, builder will pause for input; fi
