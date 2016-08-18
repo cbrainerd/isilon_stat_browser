@@ -21,7 +21,7 @@ tags:
 	$(HEXAPARSE) stat_key_browser/data/key_cats.hexa > stat_key_browser/data/key_cats.json
 
 lint:
-	$(PYLINT) -E -f colorized -r n stat_key_browser tests/
+	$(PYLINT) -E -f colorized -r n stat_key_browser build_stat_browser.py tests/
 
 unittests: lint
 	$(PYTHON) -m pytest -v tests/unit/ *.py
@@ -29,8 +29,7 @@ unittests: lint
 coverage: lint
 	$(PYTHON) -m pytest -v --cov=stat_key_browser --cov-report term-missing --cov-config tests/unit/.coveragerc tests/unit/ *.py
 
-travis-ci: tags lint
-	$(PYTHON) -m pytest -v tests/unit/ hexaparse.py
+travis-ci: tags unittests jsunittests
 
 check_cluster:
 	if [ -z $$BUILD_BROWSER_ARGS ]; then echo BUILD_BROWSER_ARGS not set, builder will pause for input; fi
@@ -47,3 +46,12 @@ dist: check_cluster clean unittests tags
 	cp -r stat_key_browser $(DIST_DIR)
 	cp -r web_app $(DIST_DIR)
 	zip -r isilon_stat_browser_$(BROWSER_VERS_STRING).zip dist/*
+
+jsunittests:
+	casperjs test web_app/js/tests/unit_app_filter_lib.js \
+		--includes=web_app/js/app_filter_lib.js,web_app/js/app_lib.js
+	casperjs test web_app/js/tests/unit_app_lib.js --includes=web_app/js/app_lib.js
+	casperjs test web_app/js/tests/unit_app_papi_link.js --includes=web_app/js/app_papi_link.js
+
+jstests: dist jsunittests
+	casperjs test web_app/js/tests/smoke.js

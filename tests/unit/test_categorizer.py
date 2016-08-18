@@ -75,22 +75,17 @@ class TestCategorizer(object):
     @pytest.fixture
     def key_dict(self):
         """Return a key_dict."""
-        key_dict_3= {
-                        "node.sensor.power.A": {},
-                        "node.sensor.power.B": {},
-                        "node.sensor.altitude.A": {},
-                        "node.sensor.altitude.B": {},
-                        "node.protostats.smb1": {},
-                        "node.protostats.smb2": {},
-                        "node.protostats.smb3": {},
-                        "node.sensor.walrus.tusk": {}
-                    }
+        key_dict_3 = {
+            "node.sensor.power.A": {},
+            "node.sensor.power.B": {},
+            "node.sensor.altitude.A": {},
+            "node.sensor.altitude.B": {},
+            "node.protostats.smb1": {},
+            "node.protostats.smb2": {},
+            "node.protostats.smb3": {},
+            "node.sensor.walrus.tusk": {}
+        }
         return key_dict_3
-
-
-    def assert_is_string(self, subject):
-        assert isinstance(subject, (str, unicode))
-
 
     def test_categorizer_init_00(self, cat):
         categorizer = Categorizer(cat)

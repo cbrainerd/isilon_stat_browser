@@ -9,6 +9,7 @@ virtualenv:
   system_site_packages: false
 
 install:
+  - npm install casperjs
   - pip install -r requirements-dev.txt
 
 script:

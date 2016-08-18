@@ -4,7 +4,7 @@ function dedupe_array(a) {
   var deduped = [];
   for (var i=0; i< a.length; i++) {
     if (!hashes[a[i]]) {
-      hashes[a] = true
+      hashes[a[i]] = true
       deduped.push(a[i])
     }
   }
