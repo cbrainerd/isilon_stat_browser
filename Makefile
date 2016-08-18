@@ -21,7 +21,7 @@ tags:
 	$(HEXAPARSE) stat_key_browser/data/key_cats.hexa > stat_key_browser/data/key_cats.json
 
 lint:
-	$(PYLINT) -E -f colorized -r n stat_key_browser bin/ tests/
+	$(PYLINT) -E -f colorized -r n stat_key_browser tests/
 
 unittests: lint
 	$(PYTHON) -m pytest -v tests/unit/ *.py
