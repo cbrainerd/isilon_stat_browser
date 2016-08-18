@@ -1,5 +1,5 @@
 from mock import patch
-import isi_sdk
+import isi_sdk_7_2
 import unittest
 import stat_key_browser.key_collector as key_collector
 
@@ -115,7 +115,7 @@ class TestKeyCollector(unittest.TestCase):
         assert 'a.a' in result
         mock_method.assert_called_with('testing123', 'user1', 'pass1')
 
-    @patch.object(isi_sdk, 'ApiClient')
+    @patch.object(isi_sdk_7_2, 'ApiClient')
     def test_get_key_list_1(self, mock_method):
         key_collector._get_key_list('testing123', 'user', 'pass')
         mock_method.assert_called_with('https://testing123:8080')

@@ -18,7 +18,7 @@ class TestClusterConfig(object):
         assert results == '1.0'
 
 
-    @patch('isi_sdk.ClusterApi.get_cluster_config')
+    @patch('isi_sdk_7_2.ClusterApi.get_cluster_config')
     def test_1_get_cluster_version(self, cluster_vers):
         canned = {'onefs_version': {'release': '1.0'}}
         response = MockClusterVersionResponse(canned)
@@ -26,7 +26,7 @@ class TestClusterConfig(object):
         results = cluster_config._get_cluster_version('4.3.2.1', 'u', 'p')
         assert results == '1.0'
 
-    @patch('isi_sdk.ClusterApi.get_cluster_config')
+    @patch('isi_sdk_7_2.ClusterApi.get_cluster_config')
     def test_3_get_cluster_versions_bug_169014(self, cluster_vers):
         response = MockClusterVersionResponse({})
         cluster_vers.return_value = response
