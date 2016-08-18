@@ -38,7 +38,9 @@ You can also generate the stat browser from your OneFS cluster by running the bu
 ### Requirements
 Python: 2.7, 3.3, 3.4, 3.5
 
-Isilon SDK Python Language Bindings installed
+Isilon SDK Python Language Bindings installed:
+
+`pip install isi_sdk_7_2`
 
 ### Generating the stat browser
 
@@ -60,8 +62,7 @@ The script will prompt you for a username and password, and will create the brow
 
 You can use the SDK Python language bindings to automate the configuration, maintenance, and monitoring of your Isilon cluster. For information on how to install the Python language bindings and write Python scripts to access the OneFS API, refer to the following Github sites:
 
-[`https://github.com/Isilon/isilon_sdk_7_2_python`](https://github.com/Isilon/isilon_sdk_7_2_python)
-[`https://github.com/Isilon/isilon_sdk_8_0_python`](https://github.com/Isilon/isilon_sdk_8_0_python)
+[`https://github.com/Isilon/isilon_sdk`](https://github.com/Isilon/isilon_sdk)
 
 
 Copyright (c) 2016 EMC Corporation
