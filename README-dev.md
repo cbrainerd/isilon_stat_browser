@@ -11,9 +11,9 @@ Python: 2.7, 3.3, 3.4, 3.5
 
 Dependencies listed in requirements-dev.txt
 
-Isilon SDK Python language bindings
+Isilon SDK [Python language bindings](https://github.com/isilon)
 
-[`https://github.com/isilon/`](https://github.com/isilon)
+[CasperJS](http://casperjs.org) 1.1 or later
 
 ##Development getting started
 
@@ -27,6 +27,13 @@ Isilon SDK Python language bindings
 
 `pip install -r requirements-dev.txt`
 
+#### Install CasperJS 1.1 or later
+`npm install -g casperjs`
+
+Or on Mac:
+
+`brew install casperjs --devel`
+
 ### Run unit tests:
 
 `make unittests`
@@ -35,10 +42,9 @@ Isilon SDK Python language bindings
 
 `make coverage`
 
-### Run functional tests:
-The functional tests are only a stub currently.
+### Run JavaScript tests:
 
-`make functional_tests`
+`make jstests`
 
 ###Run the page building tool
 First, convert the tagging data to JSON. This step creates stat\_key\_browser/data/key\_tags.json and stat\_key\_browser/data/key\_cats.json
@@ -133,4 +139,4 @@ Contains a template representing a single key and all of its info, including its
 
 * `web_app/index.html`
 
-This is the file opened by the user to view the stat browser. This file is rendered by build_stat_browser.py from the templates, the definitions in key_tags.json and from the PAPI supplied list of keys.
+This is the file opened by the user to view the stat browser. This file is rendered by build\_stat\_browser.py from the templates, the definitions in key_tags.json and from the PAPI supplied list of keys.

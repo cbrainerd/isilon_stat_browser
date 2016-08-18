@@ -6,13 +6,13 @@ import stat_key_browser.cluster_config as cluster_config
 class TestClusterConfig(object):
 
     @patch('stat_key_browser.cluster_config._get_cluster_version')
-    def test_0_get_cluster_release(self, get_cluster_version):
+    def test_0_get_cluster_release_1(self, get_cluster_version):
         get_cluster_version.return_value = '2.0'
         results = cluster_config.get_release('4.3.2.1', 'u', 'p')
         assert results == '2.0'
 
     @patch('stat_key_browser.cluster_config._get_cluster_version')
-    def test_0_get_cluster_release(self, get_cluster_version):
+    def test_0_get_cluster_release_2(self, get_cluster_version):
         get_cluster_version.return_value = '1.0'
         results = cluster_config.get_release('4.3.2.1', 'u', 'p')
         assert results == '1.0'
