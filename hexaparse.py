@@ -27,8 +27,6 @@ import fileinput
 import json
 import re
 import logging
-import pytest
-
 
 def is_new_block(line):
     """Determine whether a string marks a new block."""
@@ -271,12 +269,14 @@ def test_hexakey_2():
 
 def test_hexakey_3():
     """Test non-key."""
+    import pytest
     with pytest.raises(ValueError):
         hexakey(':')
 
 
 def test_hexakey_4():
     """Test non-key."""
+    import pytest
     with pytest.raises(ValueError):
         hexakey(': ')
 
