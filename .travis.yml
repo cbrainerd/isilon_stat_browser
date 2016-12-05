@@ -9,7 +9,7 @@ virtualenv:
   system_site_packages: false
 
 install:
-  - npm install casperjs
+  - npm install -g casperjs phantomjs-prebuilt
   - pip install -r requirements-dev.txt
 
 script:

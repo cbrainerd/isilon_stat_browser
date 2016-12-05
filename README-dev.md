@@ -28,7 +28,7 @@ Isilon SDK [Python language bindings](https://github.com/isilon)
 `pip install -r requirements-dev.txt`
 
 #### Install CasperJS 1.1 or later
-`npm install -g casperjs`
+`npm install -g casperjs phantomjs-prebuilt`
 
 Or on Mac:
 

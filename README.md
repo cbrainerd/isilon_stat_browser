@@ -38,9 +38,6 @@ You can also generate the stat browser from your OneFS cluster by running the bu
 ### Requirements
 Python: 2.7, 3.3, 3.4, 3.5
 
-Isilon SDK Python Language Bindings installed:
-
-`pip install isi_sdk_7_2`
 
 ### Generating the stat browser
 

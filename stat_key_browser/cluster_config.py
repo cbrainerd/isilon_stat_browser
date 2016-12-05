@@ -5,10 +5,10 @@ except ImportError as err:
     try:
         # Try the original SDK library name
         import isi_sdk
-    except ImportError as err:
-        print('Unable to import isi_sdk_7_2. Please install the Isilon SDK.')
+    except ImportError:
+        print('Unable to import isi_sdk_7_2. Please install the Isilon SDK:')
+        print('pip install isi_sdk_7_2')
         print('See https://github.com/isilon')
-        print(err)
         sys.exit(1)
 
 
